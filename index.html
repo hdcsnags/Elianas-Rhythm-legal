@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eliana's Rhythm — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 17px;
+    color: #1c1c1e;
+    background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e8eb; background: #0b0b0d; }
+    a { color: #8ab4ff; }
+    hr { border-color: #333; }
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  .updated { color: #6b6b70; font-size: 0.9rem; margin-top: 0; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 2rem 0; }
+  ul { padding-left: 1.3rem; }
+  li { margin-bottom: 0.5rem; }
+</style>
+</head>
+<body>
+
+<h1>Eliana's Rhythm — Privacy Policy</h1>
+<p class="updated">Last updated: August 21, 2026</p>
+
+<hr>
+
+<h2>What this app is</h2>
+<p>Eliana's Rhythm is a Christian spiritual companion app — Bible reading, an AI companion for
+conversation and Scripture study, journaling, and prayer tracking.</p>
+
+<h2>Data this app collects, and where it goes</h2>
+
+<p><strong>Account info.</strong> Sign-in is via Google Sign-In and is optional — the app works
+without an account, with journal/prayer data staying local to your device by default. If you sign
+in, your email and a user ID are stored in Firebase Authentication.</p>
+
+<p><strong>Journal and prayer entries.</strong> Stored locally on your device by default. If
+you're signed in, these sync to Firestore (Google Cloud) so they're available across your
+devices.</p>
+
+<p><strong>Conversations with Eliana (the AI companion).</strong> When you talk to Eliana or ask a
+question about a Bible verse, your message is sent to OpenAI's API to generate a response. This
+can include personal reflections, emotional or spiritual struggles, or anything else you choose to
+share in conversation — please be aware this content leaves the app and is processed by a third
+party (OpenAI) to generate the response.</p>
+
+<p><strong>Bible study insights you generate.</strong> When you ask Eliana about a specific verse
+and no cached answer exists yet, your request generates a fresh answer, which is cached in the
+app's shared Bible-study database (Firestore) so future users benefit from it too — this cached
+content is the Scripture commentary itself, not tied to your identity in the cache.</p>
+
+<p><strong>Crash and usage data.</strong> Firebase Crashlytics (crash reports) and Firebase
+Analytics (usage patterns) collect standard diagnostic data to help fix bugs and understand
+feature usage.</p>
+
+<h2>Sensitive content</h2>
+<p>This app is explicitly religious/spiritual in nature. Conversations, journal entries, and
+prayer requests may reflect your religious beliefs, mental health, or personal struggles. We treat
+this content as sensitive: it is not sold, and is not used for advertising — this app shows no ads
+and has no ad SDKs.</p>
+
+<p>Third parties this data may pass through to provide the app's features:</p>
+<ul>
+  <li><strong>OpenAI</strong> — processes conversation text to generate Eliana's responses.
+  Subject to <a href="https://openai.com/privacy">OpenAI's own privacy policy</a> and API
+  data-use terms.</li>
+  <li><strong>Google (Firebase)</strong> — authentication, data storage, crash reports, and
+  usage analytics. Subject to <a href="https://policies.google.com/privacy">Google's privacy
+  policy</a>.</li>
+</ul>
+
+<p>Voice/guided-session features are disabled app-wide in this build — no audio is sent to any
+voice provider. If that feature is re-enabled in a future release, this policy will be updated
+before that release ships.</p>
+
+<h2>Your choices</h2>
+<ul>
+  <li>You can use the app's Bible reading and study features without signing in at all — no
+  account, no cloud sync, no data leaves your device except direct AI-companion conversations and
+  cached verse insights, which happen regardless of sign-in state.</li>
+  <li>You can permanently delete your journal entries, profile, and account at any time from
+  <strong>Settings → Account &amp; Data → Delete My Data</strong>.</li>
+  <li>Contact: <a href="mailto:PLACEHOLDER@example.com">PLACEHOLDER@example.com</a></li>
+</ul>
+
+<h2>Changes to this policy</h2>
+<p>This is a closed-test-stage policy and will be revised before any public release, particularly
+around data retention periods.</p>
+
+</body>
+</html>
