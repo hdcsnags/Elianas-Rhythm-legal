@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Where Verse 21 Went</title>
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --paper:#FAFAF8; --card:#FFFFFF; --inset:#FBF7EB; --ink:#252523; --ink-2:#62625E;
+    --gold:#8A6900; --gold-deep:#735600; --hair:#E8E6E0; --rail:#B8912E;
+  }
+  :root:not([data-theme="light"]){ }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#000000; --card:#0E0E0E; --inset:#131107; --ink:#EDEDEA; --ink-2:#A5A49D;
+      --gold:#FFC233; --gold-deep:#D9A82E; --hair:#26241E; --rail:#8A6900;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#000000; --card:#0E0E0E; --inset:#131107; --ink:#EDEDEA; --ink-2:#A5A49D;
+    --gold:#FFC233; --gold-deep:#D9A82E; --hair:#26241E; --rail:#8A6900;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size:1.05rem; line-height:1.72;
+  }
+  .page{max-width:46rem; margin:0 auto; padding:4rem 1.4rem 6rem}
+  header.hero{text-align:center; margin-bottom:3.5rem}
+  .bracket-mark{
+    font-family:"Cormorant Garamond", Georgia, serif; color:var(--gold);
+    font-size:1.05rem; letter-spacing:.35em; text-transform:uppercase; font-weight:600;
+  }
+  h1{
+    font-family:"Cormorant Garamond", Georgia, serif; font-weight:600;
+    font-size:clamp(2.4rem,6vw,3.4rem); line-height:1.12; margin:.6rem 0 .8rem; text-wrap:balance;
+  }
+  .hero p.sub{color:var(--ink-2); font-style:italic; margin:0 auto; max-width:34rem; text-wrap:balance}
+  .rule{border:none; border-top:1px solid var(--hair); margin:2.6rem auto; width:38%;}
+  .rule.gold{border-top:1px solid var(--rail); width:5rem}
+  .foreword{
+    background:var(--card); border:1px solid var(--hair); border-radius:10px;
+    padding:1.5rem 1.7rem; font-style:italic; color:var(--ink);
+  }
+  .foreword .sig{font-style:normal; color:var(--ink-2); margin-top:.8rem; font-size:.95rem}
+  section{margin-top:3.2rem}
+  .eyebrow{
+    font-family:"IBM Plex Sans", system-ui, sans-serif; font-size:.72rem; font-weight:600;
+    letter-spacing:.22em; text-transform:uppercase; color:var(--gold-deep);
+  }
+  h2{
+    font-family:"Cormorant Garamond", Georgia, serif; font-weight:600;
+    font-size:1.85rem; line-height:1.2; margin:.35rem 0 1rem; text-wrap:balance;
+  }
+  p{margin:0 0 1.1rem}
+  strong{font-weight:600}
+  em{font-style:italic}
+  .scripture{
+    background:var(--inset); border-left:3px solid var(--rail); border-radius:0 8px 8px 0;
+    padding:1.1rem 1.3rem; margin:1.4rem 0;
+  }
+  .scripture .ref{
+    font-family:"IBM Plex Sans", system-ui, sans-serif; font-size:.72rem; font-weight:600;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--gold-deep); margin-bottom:.35rem;
+  }
+  .scripture .txt{
+    font-family:"Cormorant Garamond", Georgia, serif; font-size:1.28rem; line-height:1.5; font-style:italic;
+  }
+  .stage{display:flex; gap:1rem; margin:1.1rem 0}
+  .stage .n{
+    flex:none; width:2rem; height:2rem; border:1px solid var(--rail); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-family:"Cormorant Garamond", Georgia, serif; font-weight:700; color:var(--gold);
+  }
+  .stage .body{flex:1}
+  .tablewrap{overflow-x:auto; border:1px solid var(--hair); border-radius:10px; margin:1.4rem 0}
+  table{border-collapse:collapse; width:100%; min-width:34rem; font-size:.92rem; background:var(--card)}
+  th{
+    font-family:"IBM Plex Sans", system-ui, sans-serif; font-size:.7rem; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--gold-deep); text-align:left;
+    padding:.7rem .9rem; border-bottom:1px solid var(--hair);
+  }
+  td{padding:.6rem .9rem; border-bottom:1px solid var(--hair); vertical-align:top; line-height:1.5}
+  tr:last-child td{border-bottom:none}
+  td.v{font-weight:600; white-space:nowrap; font-variant-numeric:tabular-nums}
+  td.home{color:var(--ink-2)}
+  .apparatus{
+    font-family:"IBM Plex Sans", system-ui, sans-serif; font-size:.83rem; color:var(--ink-2);
+    line-height:1.6;
+  }
+  .note{
+    border:1px solid var(--hair); border-radius:10px; background:var(--card);
+    padding:1.1rem 1.3rem; margin:1.4rem 0; font-size:.97rem;
+  }
+  .note .lbl{
+    font-family:"IBM Plex Sans", system-ui, sans-serif; font-size:.68rem; font-weight:600;
+    letter-spacing:.2em; text-transform:uppercase; color:var(--gold-deep); margin-bottom:.4rem;
+  }
+  .closing{
+    text-align:center; margin-top:3.6rem; font-family:"Cormorant Garamond", Georgia, serif;
+    font-size:1.3rem; font-style:italic; line-height:1.5; color:var(--ink);
+  }
+  .closing .fin{color:var(--gold); letter-spacing:.3em; font-size:1rem; margin-top:1.2rem; font-style:normal}
+  a{color:var(--gold-deep)}
+  @media (prefers-reduced-motion: reduce){ *{scroll-behavior:auto} }
+</style>
+
+<div class="page">
+  <header class="hero">
+    <div class="bracket-mark">⟦ a study in honest brackets ⟧</div>
+    <h1>Where Verse 21 Went</h1>
+    <p class="sub">Why a handful of familiar verses sit differently in the oldest Bibles — what the manuscripts show, how we tested our own bias, and why nothing was hidden.</p>
+  </header>
+
+  <div class="foreword">
+    <p>Mom — you asked me where a verse went, and I want you to know that question did work. It sent three independent researchers into the manuscripts, it corrected our own drafts more than once, and it changed how the app treats every one of these passages. This is the whole answer, written for someone who loves the Word enough to ask it. Nothing here asks you to take our word for anything — every claim names its evidence.</p>
+    <p class="sig">— Michael</p>
+  </div>
+
+  <section>
+    <div class="eyebrow">The short answer</div>
+    <h2>The verse you asked about is still there</h2>
+    <p>Jesus' answer about the demon that would not come out <strong>is in the Eliana Bible</strong>, at Mark 9:29:</p>
+    <div class="scripture">
+      <div class="ref">Mark 9:29 · Eliana Bible</div>
+      <div class="txt">And he said to them, &ldquo;This kind cannot come out by anything except prayer.&rdquo;</div>
+    </div>
+    <p>What differs from the King James is two words at the end — <em>&ldquo;and fasting&rdquo;</em> — and one whole verse in Matthew&rsquo;s parallel account (Matthew 17:21), which the KJV carries and the earliest manuscripts do not. Fifteen other short verses share Matthew 17:21&rsquo;s situation, and every major modern translation — ESV, NIV, NASB, CSB — makes the same call our translation makes, for the same reason: they follow manuscripts copied roughly a thousand years closer to the apostles than the ones available in 1611.</p>
+    <p>That is the summary. The rest of this document is the evidence — because a summary is exactly the kind of thing you shouldn&rsquo;t have to take on trust.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">First things first</div>
+    <h2>Nothing numbered was ever cut</h2>
+    <p>The prophets did not write in verses. Paul did not number his sentences. For fifteen centuries the Scriptures flowed as continuous text. Chapter divisions arrived around <strong>1205</strong> (Stephen Langton); the verse numbers we all memorize arrived in <strong>1551</strong>, added by the printer Robert Estienne — to the Greek text he had, which was assembled from the later medieval manuscripts available in Europe at the time.</p>
+    <p>The order of events explains everything. The numbers were stamped onto the <em>fuller, later</em> text first; the <em>older, shorter</em> manuscripts were recovered afterward — Sinaiticus from a desert monastery, papyri from Egyptian sands. When translators followed the older evidence, they faced a choice: renumber the entire Bible and break a thousand years of sermons, concordances, and memory verses — or keep the standard numbers and let the gaps show.</p>
+    <p>They let the gaps show. So the skipped number is not the scar of deletion. <strong>It is the scar of honesty</strong> — visible in the numbering at exactly the places where the evidence changed.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">The case study</div>
+    <h2>Watching a verse grow: Mark 9:29</h2>
+    <p>The manuscripts let us watch your verse grow — in three visible stages.</p>
+    <div class="stage"><div class="n">1</div><div class="body"><p><strong>The earliest witnesses end at &ldquo;prayer.&rdquo;</strong> Codex Sinaiticus as first written, Codex Vaticanus, and manuscript 0274 — our oldest complete testimony, from the 300s — read: <em>&ldquo;This kind cannot come out by anything except by prayer.&rdquo;</em></p></div></div>
+    <div class="stage"><div class="n">2</div><div class="body"><p><strong>Most later copies carry two more words:</strong> <em>&ldquo;and fasting.&rdquo;</em> The early church deeply prized fasting, and copyists devoted to that discipline heard it as belonging. Related fasting expansions appear at 1&nbsp;Corinthians 7:5 and Acts 10:30 in parts of the tradition — in different Greek wording, but the same devotional instinct.</p></div></div>
+    <div class="stage"><div class="n">3</div><div class="body"><p><strong>The whole expanded saying was then imported into Matthew</strong> as a new verse — 17:21, fasting included — even though Matthew&rsquo;s Jesus had already answered the disciples&rsquo; question completely in verse 20. The transplant arrives carrying the growth of the verse it came from: the sequence, preserved in the copies themselves.</p></div></div>
+    <p>One manuscript even catches the process mid-act: <strong>Sinaiticus&rsquo;s original scribe wrote the shorter text at both places, and a later corrector added the expansion at both</strong> — the growth of the text, visible inside a single book.</p>
+    <div class="note">
+      <div class="lbl">A detail worth savoring</div>
+      <p style="margin:0">Matthew&rsquo;s own answer in 17:20 has its own small manuscript story. The critical text reads <em>&ldquo;because of your little faith&rdquo;</em> (ὀλιγοπιστίαν); the manuscripts behind the KJV read <em>&ldquo;because of your unbelief.&rdquo;</em> Even the answer verse carries a variant — and both readings make the same diagnosis.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">The fair question</div>
+    <h2>Couldn&rsquo;t the old pages simply be damaged?</h2>
+    <p>It deserves asking out loud: is there any chance these verses were just <em>missing</em> — a torn page, a skipped line? Three independent checks say no.</p>
+    <p><strong>First, the pages are intact.</strong> Sinaiticus — the oldest complete Greek New Testament in existence — runs continuously from Matthew 17:20 into what we number 17:22. No hole, no fading, no seam. The scribe did not lose the verse; the scribe never had it. The same is true at each of the sixteen. (And the manuscripts show us what real scribal hesitation looks like: at the end of Mark, Vaticanus leaves a rare blank column — a copyist visibly leaving room for an ending he knew of but did not find in his source. These scribes were not hiding anything.)</p>
+    <p><strong>Second, the witnesses are independent.</strong> The earliest translations, made in different languages on different continents — Syriac in the east, Coptic in Egypt, portions of the Old Latin in the west — also lack these verses. Physical damage does not replicate itself across independent translation traditions an empire apart. A shorter original does.</p>
+    <p><strong>Third, every one of the sixteen has a visible source.</strong> Each &ldquo;missing&rdquo; verse exists, in nearly the same words, somewhere else in the Gospels or Acts. Copyists who knew the parallels by heart filled them in — harmonizing, the way anyone who has memorized one Gospel finds its wording surfacing while reading another. It is easy to explain why a devout scribe would <em>add</em> a beloved line. It is very hard to explain why anyone would <em>delete</em> it from every early witness at once, in every language, with no one coordinating them.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Full disclosure</div>
+    <h2>The sixteen, each one named</h2>
+    <p>Transparency means naming every case. Here they are, with the passage where each verse&rsquo;s content lives securely:</p>
+    <div class="tablewrap"><table>
+      <tr><th>Verse</th><th>Its content lives at</th><th>Editorial confidence</th></tr>
+      <tr><td class="v">Matthew 17:21</td><td class="home">Mark 9:29 (in its expanded form)</td><td>High</td></tr>
+      <tr><td class="v">Matthew 18:11</td><td class="home">Luke 19:10</td><td>High — though a closer call than most</td></tr>
+      <tr><td class="v">Matthew 23:14</td><td class="home">Mark 12:40 · Luke 20:47</td><td>High</td></tr>
+      <tr><td class="v">Mark 7:16</td><td class="home">Mark 4:23</td><td>High</td></tr>
+      <tr><td class="v">Mark 9:44, 9:46</td><td class="home">Mark 9:48 (echoing Isaiah 66:24)</td><td>High</td></tr>
+      <tr><td class="v">Mark 11:26</td><td class="home">Matthew 6:15</td><td>High</td></tr>
+      <tr><td class="v">Mark 15:28</td><td class="home">Luke 22:37 (quoting Isaiah 53:12)</td><td>High</td></tr>
+      <tr><td class="v">Luke 17:36</td><td class="home">Matthew 24:40</td><td>Very high — even most later copies lack it</td></tr>
+      <tr><td class="v">Luke 23:17</td><td class="home">Matthew 27:15 · Mark 15:6</td><td>High — witnesses even disagree where it goes</td></tr>
+      <tr><td class="v">John 5:4</td><td class="home">An explanation of the sick man&rsquo;s words in 5:7</td><td>Very high — 20+ Greek copies that have it flag it themselves</td></tr>
+      <tr><td class="v">Acts 8:37</td><td class="home">A genuinely ancient baptismal confession — Irenaeus attests its second half c. AD 180</td><td>High</td></tr>
+      <tr><td class="v">Acts 15:34</td><td class="home">An explanation for Silas in v40</td><td>High</td></tr>
+      <tr><td class="v">Acts 24:7</td><td class="home">A longer form of the lawyer&rsquo;s speech</td><td>Moderate-high — one of the closer calls</td></tr>
+      <tr><td class="v">Acts 28:29</td><td class="home">A scene-change smoothing</td><td>High</td></tr>
+      <tr><td class="v">Romans 16:24</td><td class="home">Paul&rsquo;s benediction at 16:20</td><td>High</td></tr>
+    </table></div>
+    <p class="apparatus">Witness data verified against the standard critical apparatus (NA28/UBS, Metzger&rsquo;s <em>Textual Commentary</em>, NET textual notes). Two longer passages — Mark 16:9&ndash;20 and John 7:53&ndash;8:11 — stand apart: extensive, ancient, and deeply loved, they are <em>kept</em> in the app, with their manuscript story told honestly inside their studies. The &ldquo;three heavenly witnesses&rdquo; wording at 1&nbsp;John 5:7 in the KJV tradition entered through late Latin manuscripts and appears in no early Greek witness.</p>
+    <p><strong>Notice what is not on this list: any doctrine.</strong> Prayer, fasting, forgiveness, the Son seeking the lost, confession before baptism — every truth in these sixteen verses stands secure in the passages they were copied from. Fasting is taught plainly at Matthew 6:16&ndash;18 and practiced at Acts 13:2&ndash;3 and 14:23. Removing the copies removes nothing the Bible teaches.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">The deeper question</div>
+    <h2>Does &ldquo;only by prayer&rdquo; even make sense?</h2>
+    <p>Here is the objection at full strength, because it deserves it: surely the disciples <em>prayed</em> during their attempt — so if the original text has Jesus answer &ldquo;this kind cannot come out except by prayer,&rdquo; isn&rsquo;t that answer strange? <em>You know why it failed? Prayer.</em></p>
+    <p>Three observations from the text dissolve it — and leave the shorter reading sharper than the longer one.</p>
+    <p><strong>Mark never says they prayed.</strong> Mark 9:18 records the attempt and 9:28 records their question; the method is never stated. And by Mark 9 these men were not novices: Jesus had given the Twelve authority over unclean spirits (Mark 6:7), and they had cast out many demons — successfully, routinely (6:13). The natural reading is that they did what had always worked: they <em>commanded</em>, wielding delegated authority. Their own question betrays it — <em>&ldquo;Why could not <u>we</u> cast it out?&rdquo;</em> — with the &ldquo;we&rdquo; emphatic in the Greek.</p>
+    <p><strong>Jesus&rsquo; answer meets that emphasis exactly.</strong> &ldquo;This kind can come out by <em>nothing</em>&rdquo; — by no instrument — &ldquo;except by prayer.&rdquo; Not a forgotten technique; a misplaced dependence. The power had been treated as a possession, when it was only ever God&rsquo;s to ask for. The whole scene agrees: &ldquo;faithless generation&rdquo; (9:19), &ldquo;all things are possible for the one who believes&rdquo; (9:23), &ldquo;I believe; help my unbelief!&rdquo; (9:24) — and Matthew&rsquo;s parallel gives the same diagnosis in one word: <em>faith</em>. Notice, too, that Jesus casts the spirit out with a command and no recorded prayer (9:25) — so on <em>any</em> reading, &ldquo;prayer&rdquo; must mean a pattern of dependence, not a formula recited in the moment.</p>
+    <p><strong>And &ldquo;and fasting&rdquo; quietly changes the sermon.</strong> Heard as technique, fasting is the natural upgrade — <em>this kind needs the stronger protocol</em>. The addition shifts the saying from dependence toward regimen; it also sits awkwardly in Mark, the Gospel where Jesus defends his disciples for <em>not</em> fasting while the bridegroom is with them (2:18&ndash;20). A scribe in a fasting-devoted church had every reason to add it. No one had a reason to remove it. The shorter reading needs no rescue — it is the sharper word, and it protects the very point Jesus was making.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Ranked honestly</div>
+    <h2>Where the scholars still differ</h2>
+    <p>Honesty cuts both ways, so here is the other side. On Matthew 17:21 the judgment is about as settled as this discipline gets. But on Mark 9:29&rsquo;s two words, the newest major critical edition of Mark displays the shorter form yet <strong>formally leaves the question open</strong> — its own editors were divided — and serious scholars (including advocates of the Byzantine textual tradition) continue to defend &ldquo;and fasting&rdquo; as original. Most textual critics judge it an early addition; the matter is weighed, not closed.</p>
+    <p>We built that honesty into the app itself: the note at Mark 9:29 says exactly this, and none of our materials describe the critical text&rsquo;s verdicts as unanimous where they are not.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Checking ourselves</div>
+    <h2>How we guarded against our own bias</h2>
+    <p>You raised something worth naming: the old church could write things <em>in</em> to fit a narrative — and so can new researchers, in either direction. So before anything shipped, we made the work adversarial on purpose.</p>
+    <p><strong>Three researchers answered the same questions blind</strong> — none saw another&rsquo;s analysis, and none knew which conclusion was hoped for. All three converged independently on the manuscript story you have just read. On how the app should <em>present</em> it, they split — one argued that even bracketed verses printed inline would get copied and remembered as Scripture with their labels stripped — and that dissent shaped the final design as much as the agreement did.</p>
+    <p><strong>Then the draft itself was fact-checked adversarially</strong>, with instructions to catch errors, not to affirm. It caught seven — including a place where our own document quoted the wrong wording <em>of the KJV itself</em>, an overstated claim about what Irenaeus quotes, and two confidence ratings pitched higher than the scholarship supports. Every correction was applied; anything that could not be verified was removed rather than printed.</p>
+    <p><strong>And the result in the app is the opposite of hiding.</strong> The sixteen verses are no longer silent gaps. Each one now appears at its numbered place in the reader, visibly carved out — <span style="font-family:'IBM Plex Sans',sans-serif; font-size:.9em">⟦&nbsp;21&nbsp;·&nbsp;traditional text — tap to read&nbsp;⟧</span> — and one tap opens the traditional wording in full, the specific manuscripts on each side, and the whole teaching. The reader sees <em>more</em> than a standard modern Bible shows, not less: the words your Bible carries, the words the oldest copies carry, and the evidence — side by side, labeled, nothing quietly picked.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Why this should strengthen you</div>
+    <h2>The tradition kept the receipts on itself</h2>
+    <p>Scripture warns against adding to the words God has given (Deuteronomy 4:2; Revelation 22:18). These sixteen verses are evidence the warning was needed — and evidence that the church&rsquo;s own manuscripts preserved the means to catch every addition. For the earliest text to be recoverable at all, copies had to survive from before the expansions spread, in multiple languages, in multiple lands, agreeing with each other across centuries with no one coordinating them. That is not what a corrupted text looks like. That is what a text looks like when the God who spoke it also left a trail by which every generation could test what it was handed.</p>
+    <p>And none of this diminishes the King James. Its translators rendered, with reverence and skill, the best text available to them in 1611. The generations since were simply given more — codices from the 300s, papyri from the 100s, desert scrolls — and honoring the KJV&rsquo;s own spirit means doing with our evidence what its translators did with theirs.</p>
+  </section>
+
+  <hr class="rule gold">
+  <div class="closing">
+    <p>&ldquo;The grass withers, the flower fades &mdash;<br>but the word of our God stands forever.&rdquo;</p>
+    <p style="font-size:1rem; color:var(--ink-2)">Isaiah 40:8</p>
+    <div class="fin">⟦ &nbsp;NOTHING HIDDEN&nbsp; ⟧</div>
+  </div>
+</div>
+
+</body>
+</html>
