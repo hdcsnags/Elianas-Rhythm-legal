@@ -32,72 +32,85 @@
 <body>
 
 <h1>Eliana's Rhythm — Privacy Policy</h1>
-<p class="updated">Last updated: August 21, 2026</p>
+<p class="updated">Last updated: November 7, 2026</p>
 
 <hr>
 
 <h2>What this app is</h2>
-<p>Eliana's Rhythm is a Christian spiritual companion app — Bible reading, an AI companion for
-conversation and Scripture study, journaling, and prayer tracking.</p>
+<p>Eliana's Rhythm is a Christian spiritual companion app: Bible reading and study, an AI
+companion for conversation about Scripture, journaling, prayer, and short stillness exercises.
+It is made by an individual developer, not a company. It shows no ads and contains no ad SDKs.</p>
 
 <h2>Data this app collects, and where it goes</h2>
 
-<p><strong>Account info.</strong> Sign-in is via Google Sign-In and is optional — the app works
-without an account, with journal/prayer data staying local to your device by default. If you sign
-in, your email and a user ID are stored in Firebase Authentication.</p>
+<p><strong>Account info.</strong> Sign-in is via Google Sign-In and is optional. The app works
+fully without an account; journal and prayer data then stays on your device. If you sign in, your
+email address and a user ID are stored in Firebase Authentication (Google).</p>
 
-<p><strong>Journal and prayer entries.</strong> Stored locally on your device by default. If
-you're signed in, these sync to Firestore (Google Cloud) so they're available across your
-devices.</p>
+<p><strong>Journal and prayer entries.</strong> Stored on your device by default. If you are
+signed in, they sync to Firestore (Google Cloud) under your user ID so they are available across
+your devices. They are kept until you delete them or delete your account.</p>
 
-<p><strong>Conversations with Eliana (the AI companion).</strong> When you talk to Eliana or ask a
-question about a Bible verse, your message is sent to OpenAI's API to generate a response. This
-can include personal reflections, emotional or spiritual struggles, or anything else you choose to
-share in conversation — please be aware this content leaves the app and is processed by a third
-party (OpenAI) to generate the response.</p>
+<p><strong>Conversations with Eliana (the AI companion), verse questions, journaling prompts and
+generated prayers.</strong> When you talk to Eliana, ask about a verse, ask for a journaling
+prompt or ask for a prayer, the text you type is sent through our own relay server (a Firebase
+Cloud Function) to Anthropic's Claude API, which generates the response. This can include personal
+reflections, emotional or spiritual struggles, or anything else you choose to share. Please be
+aware that this content leaves the app and is processed by a third party (Anthropic) to generate
+the response. The relay exists so that no API credentials live on your phone; it does not keep a
+copy of your messages. Your conversation history is kept on your device, not on our servers.</p>
 
-<p><strong>Bible study insights you generate.</strong> When you ask Eliana about a specific verse
-and no cached answer exists yet, your request generates a fresh answer, which is cached in the
-app's shared Bible-study database (Firestore) so future users benefit from it too — this cached
-content is the Scripture commentary itself, not tied to your identity in the cache.</p>
+<p><strong>Bible study insights.</strong> When you ask Eliana about a specific verse and no answer
+exists yet, the generated commentary is cached in the app's shared Bible-study database
+(Firestore) so future readers benefit from it. The cache holds the commentary itself, the verse
+reference and the model that wrote it. It does not hold your identity or your question text.</p>
 
 <p><strong>Crash and usage data.</strong> Firebase Crashlytics (crash reports) and Firebase
-Analytics (usage patterns) collect standard diagnostic data to help fix bugs and understand
-feature usage.</p>
+Analytics (which screens and features are used) collect standard diagnostic data, including a
+device model, OS version and an app-instance identifier, to fix bugs and understand feature use.</p>
+
+<p><strong>What is not collected.</strong> No location, contacts, photos, microphone or camera
+data. Voice and guided-audio sessions are disabled in this release, so no audio is recorded or
+sent to any voice provider. Stillness exercises play audio bundled with the app. If voice
+features are enabled in a future release, this policy will be updated before that release ships.</p>
 
 <h2>Sensitive content</h2>
-<p>This app is explicitly religious/spiritual in nature. Conversations, journal entries, and
-prayer requests may reflect your religious beliefs, mental health, or personal struggles. We treat
-this content as sensitive: it is not sold, and is not used for advertising — this app shows no ads
-and has no ad SDKs.</p>
+<p>This app is explicitly religious and spiritual in nature. Conversations, journal entries and
+prayer requests may reflect your religious beliefs, mental health or personal struggles. We treat
+this content as sensitive: it is not sold, not shared for advertising, and not used to train any
+model by us.</p>
 
 <p>Third parties this data may pass through to provide the app's features:</p>
 <ul>
-  <li><strong>OpenAI</strong> — processes conversation text to generate Eliana's responses.
-  Subject to <a href="https://openai.com/privacy">OpenAI's own privacy policy</a> and API
-  data-use terms.</li>
-  <li><strong>Google (Firebase)</strong> — authentication, data storage, crash reports, and
-  usage analytics. Subject to <a href="https://policies.google.com/privacy">Google's privacy
-  policy</a>.</li>
+  <li><strong>Anthropic</strong> — processes conversation, verse-question, journaling-prompt and
+  prayer text to generate Eliana's responses, via our relay. Subject to
+  <a href="https://www.anthropic.com/privacy">Anthropic's privacy policy</a> and its commercial
+  API data terms, under which API inputs and outputs are not used to train Anthropic's models.</li>
+  <li><strong>Google (Firebase)</strong> — authentication, data storage, the relay server, crash
+  reports and usage analytics. Subject to
+  <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</li>
 </ul>
 
-<p>Voice/guided-session features are disabled app-wide in this build — no audio is sent to any
-voice provider. If that feature is re-enabled in a future release, this policy will be updated
-before that release ships.</p>
+<h2>Children</h2>
+<p>The app is intended for adults and for teens with a parent's permission. It is not directed at
+children under 13 and does not knowingly collect personal information from them.</p>
 
 <h2>Your choices</h2>
 <ul>
-  <li>You can use the app's Bible reading and study features without signing in at all — no
-  account, no cloud sync, no data leaves your device except direct AI-companion conversations and
-  cached verse insights, which happen regardless of sign-in state.</li>
-  <li>You can permanently delete your journal entries, profile, and account at any time from
-  <strong>Settings → Account &amp; Data → Delete My Data</strong>.</li>
+  <li>You can use Bible reading and study without signing in. Without an account there is no
+  cloud sync; the only data that leaves your device is what you type to Eliana and the cached
+  verse insights described above.</li>
+  <li>You can permanently delete your journal entries, prayers, profile and account at any time
+  from <strong>Settings → Account &amp; Data → Delete My Data</strong>. Deletion removes your
+  Firestore data and your Firebase Authentication record. You can also request deletion by email;
+  see <a href="delete-account.html">account deletion</a>.</li>
   <li>Contact: <a href="mailto:ddsnags@gmail.com">ddsnags@gmail.com</a></li>
 </ul>
 
 <h2>Changes to this policy</h2>
-<p>This is a closed-test-stage policy and will be revised before any public release, particularly
-around data retention periods.</p>
+<p>When the app's data practices change, this page is updated and the date at the top changes.
+Material changes, such as enabling voice features, are announced in the app before they take
+effect.</p>
 
 </body>
 </html>
